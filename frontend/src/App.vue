@@ -1,26 +1,30 @@
 <template>
   <div id="app">
+    <Header/>
+    <GamePage/>
+    <Floor/>
   </div>
 </template>
 
 <script>
 
+import Header from "./components/Header";
+import GamePage from "./components/GamePage";
+import Floor from "./components/Floor";
 
 export default {
   name: 'App',
   components: {
-
+    Header, GamePage, Floor
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  padding: 0;
 }
 </style>
