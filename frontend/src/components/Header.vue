@@ -13,7 +13,7 @@ export default {
     }
   },
   mounted() {
-    fetch('http://localhost:8000/v1/games/1')
+    fetch('http://0.0.0.0:5000/v1/games/1')
     .then(response => response.json())
     .then(json => {
       this.game = json

@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter
 from starlette import status
 
-from backend.models.games_model import Game
+from models.games_model import Game
 
 router = APIRouter()
 
