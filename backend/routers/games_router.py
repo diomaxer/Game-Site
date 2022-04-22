@@ -1,4 +1,9 @@
+from typing import List
+
 from fastapi import APIRouter
+from starlette import status
+
+from backend.models.games_model import Game
 
 router = APIRouter()
 
@@ -13,11 +18,23 @@ games = [{
 }]
 
 
-@router.get('/')
+@router.get(
+    path="/",
+    description="Get all products",
+    status_code=status.HTTP_200_OK,
+    tags=['games'],
+    response_model=List[Game],
+)
 async def all_games():
     return games
 
 
-@router.get('/{game_id}')
+@router.get(
+    path='/{game_id}',
+    description="Get all products",
+    status_code=status.HTTP_200_OK,
+    tags=['games'],
+    response_model=Game,
+)
 async def all_games(game_id: int):
     return games[game_id - 1]

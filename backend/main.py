@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from routers import games_router
+
+from backend.routers import games_router
 
 
 app = FastAPI()
